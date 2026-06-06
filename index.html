@@ -292,6 +292,7 @@
 </script>
 </head>
 <style>
+    html { scroll-behavior: smooth; }
     body {
       font-family: Calibri, "Segoe UI", Arial, sans-serif;
       margin: 0;
@@ -350,17 +351,19 @@
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
       transition: 0.3s;
     }
+    a:focus-visible { outline: 3px solid #007bbd; outline-offset: 2px; }
     a.btn:hover {
       background: #0D4B77;
     }
     /* Make content responsive */
-body {
+html { scroll-behavior: smooth; }
+    body {
   font-family: Calibri, "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -413,7 +416,7 @@ section {
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Sain Bux is a Full Stack Developer at TechMatter and also works as a technology researcher. He specializes in API-first development, scalable web applications, and modern JavaScript frameworks, including React, Vue.js, Laravel, Node.js, Magento, WordPress, Shopify, BigCommerce, and Wix.<a href="about"> Read more</a></p>
+    <p>Sain Bux is a Full Stack Developer at TechMatter and also works as a technology researcher. He specializes in API-first development, scalable web applications, and modern JavaScript frameworks, including React, Vue.js, Laravel, Node.js, Magento, WordPress, Shopify, BigCommerce, and Wix.<a href="about.html"> Read more</a></p>
   </section>
   <section id="research">
     <h2>Research</h2>
@@ -452,16 +455,16 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;" aria-label="Facebook">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" aria-label="LinkedIn" style="margin-right:10px;">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;" aria-label="Twitter">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;" aria-label="Instagram">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
   
