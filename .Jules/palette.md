@@ -1,0 +1,3 @@
+## 2026-06-10 - Enhanced Navigation and Accessibility
+**Learning:** Icon-only social links in a static site often lack descriptive text for screen readers, and default browser focus indicators can be subtle and inconsistent across browsers. Smooth scrolling improves perceived performance for internal navigation but should respect user motion preferences.
+**Action:** Always add `aria-label` to icon-only links. Use a consistent, high-contrast `:focus-visible` style (`outline: 3px solid #007bbd`, `outline-offset: 2px`, `border-radius: 5px`) and wrap `scroll-behavior: smooth` in a `prefers-reduced-motion: no-preference` media query for inclusive UX.
