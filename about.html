@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Preconnect to Font Awesome CDN to reduce connection overhead -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <title>About Sain Bux – Full Stack Developer at TechMatter</title>
   <meta name="description" content="Learn more about Sain Bux, a Full Stack Developer at TechMatter, specializing in API-First Development, Web Architecture, and modern software engineering innovation." />
   <meta name="keywords" content="Sain Bux, Full Stack Developer, TechMatter, API-First Development, Web Applications, WordPress Developer, JavaScript, Software Engineer, GitHub Pages, Technology Research">
@@ -399,7 +401,8 @@ section {
   </style>
 <body>
   <header>
-    <img src="profile.jpg" alt="Sain Bux - Full-Stack Developer" style="border-radius:50%; width:150px; margin-bottom:15px;">
+    <!-- Optimize LCP: fetchpriority="high" prioritizes the main header image. width/height prevent Layout Shift (CLS). -->
+    <img src="profile.jpg" alt="Sain Bux - Full-Stack Developer" width="150" height="150" fetchpriority="high" style="border-radius:50%; margin-bottom:15px;">
     <h1>Sain Bux</h1>
     <p>Full Stack Developer at TechMatter </p>
   </header>
