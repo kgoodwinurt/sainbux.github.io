@@ -11,6 +11,9 @@
   <link rel="canonical" href="https://sainbux.github.io/about">
   <link rel="alternate" type="application/rss+xml" title="Sain Bux — Developer Insights RSS Feed" href="https://sainbux.github.io/feed.xml">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Optimization: Preconnect to CDN and move Font Awesome to <head> to reduce latency and prevent FOUC -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Sain Bux – Full Stack Developer at TechMatter">
   <meta property="og:description" content="Full Stack Developer specializing in API-first development, scalable web apps, and modern software solutions.">
@@ -347,10 +350,26 @@
       padding: 15px;
       margin-top: 40px;
     }
+    /* UX improvement: smooth scrolling for navigation */
+    html {
+      scroll-behavior: smooth;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+    /* Accessibility: consistent focus indicator for keyboard navigation */
+    a:focus-visible {
+      outline: 3px solid #007bbd;
+      outline-offset: 2px;
+      border-radius: 5px;
+    }
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      /* Accessibility: Update color to #007bbd for better contrast (WCAG AA) */
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
@@ -399,7 +418,8 @@ section {
   </style>
 <body>
   <header>
-    <img src="profile.jpg" alt="Sain Bux - Full-Stack Developer" style="border-radius:50%; width:150px; margin-bottom:15px;">
+    <!-- Optimization: fetchpriority="high" for LCP image, explicit dimensions to prevent Layout Shift -->
+    <img src="profile.jpg" alt="Sain Bux - Full-Stack Developer" width="150" height="150" fetchpriority="high" style="border-radius:50%; margin-bottom:15px;">
     <h1>Sain Bux</h1>
     <p>Full Stack Developer at TechMatter </p>
   </header>
@@ -433,23 +453,22 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="margin-right:10px;">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" style="margin-right:10px;">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="margin-right:10px;">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
+</div>
+</div>
   
 </div>
-
-<!-- Font Awesome (for icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </section>
 
   <footer>
