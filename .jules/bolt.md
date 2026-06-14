@@ -1,0 +1,3 @@
+## 2025-10-23 - Critical Path and LCP Optimizations for Static Portfolio
+**Learning:** For static sites without a build system, manually optimizing the critical path by preconnecting to CDNs and moving non-critical but UI-essential CSS (like Font Awesome) to the `<head>` significantly reduces FOUC and improves perceived performance. Adding `fetchpriority="high"` and explicit dimensions to the main profile image (LCP candidate) directly improves LCP and prevents Layout Shift (CLS).
+**Action:** Always check for LCP candidates in the header and ensure they have explicit dimensions and high fetch priority. Move CDN-hosted CSS to `<head>` and use `rel="preconnect"` for those CDNs.
