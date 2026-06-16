@@ -1,0 +1,3 @@
+## 2025-10-23 - Critical Path Optimization Patterns
+**Learning:** For static portfolio sites, the profile image in the header is almost always the LCP element. Moving external stylesheets like Font Awesome from the body to the head prevents FOUC and avoids delaying the rendering of subsequent elements. Adding `rel="preconnect"` for CDNs provides a measurable reduction in connection overhead for critical assets.
+**Action:** Always check for LCP candidates (images/headings) and optimize them with `fetchpriority="high"` and explicit dimensions to prevent CLS. Always move third-party CSS to the head and use preconnect for their CDNs.
