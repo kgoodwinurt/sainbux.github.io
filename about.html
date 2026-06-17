@@ -11,6 +11,9 @@
   <link rel="canonical" href="https://sainbux.github.io/about">
   <link rel="alternate" type="application/rss+xml" title="Sain Bux — Developer Insights RSS Feed" href="https://sainbux.github.io/feed.xml">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Optimization: Preconnect to CDN and move Font Awesome to <head> to reduce latency and prevent FOUC -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Sain Bux – Full Stack Developer at TechMatter">
   <meta property="og:description" content="Full Stack Developer specializing in API-first development, scalable web apps, and modern software solutions.">
@@ -399,7 +402,8 @@ section {
   </style>
 <body>
   <header>
-    <img src="profile.jpg" alt="Sain Bux - Full-Stack Developer" style="border-radius:50%; width:150px; margin-bottom:15px;">
+    <!-- Optimization: fetchpriority="high" for LCP and explicit dimensions to prevent Layout Shift (CLS) -->
+    <img src="profile.jpg" alt="Sain Bux - Full-Stack Developer" fetchpriority="high" width="150" height="150" style="border-radius:50%; margin-bottom:15px;">
     <h1>Sain Bux</h1>
     <p>Full Stack Developer at TechMatter </p>
   </header>
@@ -448,8 +452,7 @@ section {
   
 </div>
 
-<!-- Font Awesome (for icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   </section>
 
   <footer>
