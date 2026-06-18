@@ -1,0 +1,3 @@
+## 2025-06-18 - [Critical Path Optimization for Static Sites]
+**Learning:** For static portfolio sites, the Largest Contentful Paint (LCP) is often a profile image in the header. Browser discovery of this asset can be accelerated with `fetchpriority="high"`. Additionally, moving external stylesheets (like Font Awesome) from the `<body>` to the `<head>` prevents Flash of Unstyled Content (FOUC) and improves perceived performance, while `rel="preconnect"` reduces connection overhead for CDNs.
+**Action:** Always identify the LCP element and optimize it with `fetchpriority` and explicit dimensions. Ensure critical CSS is in the `<head>` and use `rel="preconnect"` for frequently used third-party origins.
