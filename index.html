@@ -292,6 +292,14 @@
 </script>
 </head>
 <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
     body {
       font-family: Calibri, "Segoe UI", Arial, sans-serif;
       margin: 0;
@@ -350,11 +358,16 @@
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
       transition: 0.3s;
+    }
+    a:focus-visible, .btn:focus-visible {
+      outline: 3px solid #007bbd;
+      outline-offset: 2px;
+      border-radius: 5px;
     }
     a.btn:hover {
       background: #0D4B77;
@@ -452,16 +465,16 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;" aria-label="Facebook">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" aria-label="LinkedIn">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;" aria-label="Twitter">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;" aria-label="Instagram">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
   
