@@ -1,0 +1,3 @@
+## 2026-06-22 - [Social Media Links Accessibility & Security]
+**Learning:** Icon-only links (like Font Awesome social icons) are inaccessible to screen readers without `aria-label`. Additionally, external links with `target="_blank"` should always use `rel="noopener noreferrer"` for security, and `rel="me"` can be used for identity verification on personal portfolios.
+**Action:** Always include `aria-label`, `title`, and `rel="me noopener noreferrer"` when implementing or updating social media icon links. Ensure consistent spacing with `margin-right` and use `text-decoration: none` to avoid unwanted underlines on icons.
