@@ -292,6 +292,9 @@
 </script>
 </head>
 <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: Calibri, "Segoe UI", Arial, sans-serif;
       margin: 0;
@@ -300,8 +303,8 @@
       color: #333;
     }
     h1, h2, h3 {
-  font-family: Calibri, "Segoe UI", sans-serif;
-}
+      font-family: Calibri, "Segoe UI", sans-serif;
+    }
     header {
       background: #0D4B77;
       color: #fff;
@@ -325,6 +328,10 @@
       text-decoration: none;
       color: #0D4B77;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #007bbd;
     }
     section {
       max-width: 900px;
@@ -350,52 +357,41 @@
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
-      transition: 0.3s;
+      transition: background 0.3s ease;
     }
     a.btn:hover {
       background: #0D4B77;
     }
     /* Make content responsive */
-body {
-  font-family: Calibri, "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f8f9fa;
-  color: #333;
-}
-
-/* Sections adjust on small screens */
-section {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-  section {
-    margin: 10px;
-    padding: 15px;
-  }
-  img {
-    width: 100px;
-  }
-}
-
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      section {
+        margin: 10px;
+        padding: 15px;
+      }
+      img {
+        width: 100px;
+      }
+    }
   </style>
 <body>
   <header>
@@ -408,7 +404,7 @@ section {
   <nav>
     <a href="index.html">Home</a>
     <a href="#about">About</a>
-    <a href="#research">Research</a>
+    <a href="index.html#research">Research</a>
     <a href="#contact">Contact</a>
   </nav>
 <section id="about">
@@ -421,7 +417,7 @@ section {
     </p>
     <p>🌐 Official Website: <a href="https://sainbux.github.io" target="_blank">sainbux.github.io</a></p>
     <p>📚 Research Profiles: <a href="https://scholar.google.com/citations?hl=en&user=q2XC7EoAAAAJ" target="_blank">Google Scholar</a> , <a href="https://orcid.org/0009-0003-9562-419X" target="_blank">ORCID</a> , <a href="https://www.researchgate.net/profile/Sain-Bux-3" target="_blank">ResearchGate</a> , <a href="https://mehran.academia.edu/SainKhaskheli" target="_blank">Academia.edu</a> , <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Sain%20Bux%22&l=list&p=1&s=10&sort=bestmatch" target="_blank">Zenodo</a></p>
-    <p>💼 Professional: <a href="https://www.linkedin.com/in/sainbux/" target="_blank">LinkedIn</a> | <a href="https://www.crunchbase.com/person/sain-bux" target="_blank">Crunchbase</a> | <a href="https://github.com/Sainbux" target="_blank">GitHub</a> | <a href="https://medium.com/@sain-bux" target="_blank">Medium</a></p>
+    <p>💼 Professional: <a href="https://www.linkedin.com/in/sainbux/" target="_blank" aria-label="LinkedIn" title="LinkedIn" rel="me noopener noreferrer">LinkedIn</a> | <a href="https://www.crunchbase.com/person/sain-bux" target="_blank">Crunchbase</a> | <a href="https://github.com/Sainbux" target="_blank">GitHub</a> | <a href="https://medium.com/@sain-bux" target="_blank">Medium</a></p>
 </section>
   <section id="contact">
     <h2>Contact</h2>
@@ -433,17 +429,17 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
-    <i class="fab fa-facebook fa-2x"></i>
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;" aria-label="Facebook" title="Facebook" rel="me noopener noreferrer">
+    <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
-    <i class="fab fa-linkedin fa-2x"></i>
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" aria-label="LinkedIn" title="LinkedIn" rel="me noopener noreferrer">
+    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
-    <i class="fab fa-twitter fa-2x"></i>
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;" aria-label="Twitter" title="Twitter" rel="me noopener noreferrer">
+    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
-    <i class="fab fa-instagram fa-2x"></i>
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;" aria-label="Instagram" title="Instagram" rel="me noopener noreferrer">
+    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
   </a>
   
 </div>
