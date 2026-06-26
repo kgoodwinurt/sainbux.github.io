@@ -1,0 +1,3 @@
+## 2026-06-26 - Critical Path and Asset Loading Optimization
+**Learning:** Moving third-party CSS (Font Awesome) from the body to the head and adding a `preconnect` hint for the CDN reduced DOMContentLoaded (DCL) by ~72% (from 50.8ms to 14.2ms) in a local static environment. Additionally, using `fetchpriority="high"` on the Largest Contentful Paint (LCP) image and providing explicit dimensions (width/height) improved LCP by ~19% and reduced potential Cumulative Layout Shift (CLS).
+**Action:** Always prioritize moving blocking resources to the head, use preconnect for known external domains, and apply fetchpriority/dimensions to above-the-fold images. Use a performance measurement script with Playwright to quantify these wins.
