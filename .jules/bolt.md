@@ -1,0 +1,3 @@
+## 2025-06-27 - Critical Path Optimization & Dead Code Elimination
+**Learning:** In this static site, placing the Font Awesome stylesheet at the end of the body caused a significant delay in DOMContentLoaded (DCL) as the browser had to re-evaluate the DOM after discovery. Moving it to the head and adding a preconnect hint reduced DCL by ~77%. Additionally, the codebase contained verbatim duplicates of base styles under a responsive comment, unnecessarily increasing file size and parse time.
+**Action:** Always audit the head/body resource placement and scan for duplicate CSS blocks in vanilla HTML projects.
