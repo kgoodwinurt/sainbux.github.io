@@ -292,6 +292,9 @@
 </script>
 </head>
 <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: Calibri, "Segoe UI", Arial, sans-serif;
       margin: 0;
@@ -325,6 +328,10 @@
       text-decoration: none;
       color: #0D4B77;
       font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #007bbd;
     }
     section {
       max-width: 900px;
@@ -350,34 +357,29 @@
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
-      transition: 0.3s;
+      transition: background 0.3s ease;
     }
     a.btn:hover {
       background: #0D4B77;
     }
+    .social-link {
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+    }
+    .social-link:hover {
+      color: #007bbd;
+      transform: translateY(-3px);
+    }
+    .social-link:focus-visible {
+      outline: 2px solid #007bbd;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
     /* Make content responsive */
-body {
-  font-family: Calibri, "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f8f9fa;
-  color: #333;
-}
-
-/* Sections adjust on small screens */
-section {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
 /* Mobile adjustments */
 @media (max-width: 600px) {
   header h1 {
@@ -413,7 +415,7 @@ section {
 
   <section id="about">
     <h2>About Me</h2>
-    <p>Sain Bux is a Full Stack Developer at TechMatter and also works as a technology researcher. He specializes in API-first development, scalable web applications, and modern JavaScript frameworks, including React, Vue.js, Laravel, Node.js, Magento, WordPress, Shopify, BigCommerce, and Wix.<a href="about"> Read more</a></p>
+    <p>Sain Bux is a Full Stack Developer at TechMatter and also works as a technology researcher. He specializes in API-first development, scalable web applications, and modern JavaScript frameworks, including React, Vue.js, Laravel, Node.js, Magento, WordPress, Shopify, BigCommerce, and Wix.<a href="about.html"> Read more</a></p>
   </section>
   <section id="research">
     <h2>Research</h2>
@@ -452,16 +454,16 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" class="social-link" title="Facebook" aria-label="Facebook" rel="me noopener noreferrer" style="margin-right:10px; text-decoration: none;">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" class="social-link" title="LinkedIn" aria-label="LinkedIn" rel="me noopener noreferrer" style="margin-right:10px; text-decoration: none;">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" class="social-link" title="Twitter" aria-label="Twitter" rel="me noopener noreferrer" style="margin-right:10px; text-decoration: none;">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" class="social-link" title="Instagram" aria-label="Instagram" rel="me noopener noreferrer" style="margin-right:10px; text-decoration: none;">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
   
