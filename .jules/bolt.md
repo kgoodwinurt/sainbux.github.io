@@ -1,0 +1,3 @@
+## 2026-07-01 - Optimizing Critical Path and LCP
+**Learning:** Relocating render-blocking stylesheets (like Font Awesome) from the end of the body to the head, combined with preconnect hints for CDNs, significantly reduces DOMContentLoaded (DCL) time. In this project, DCL for index.html was reduced by approximately 60% (42.40ms to 17.00ms). Adding explicit dimensions and fetchpriority to LCP images also helps stabilize metrics and prepare for better loading performance in real-world network conditions.
+**Action:** Always prioritize moving CSS to the head and preconnecting to high-latency origins (CDNs) to optimize the critical rendering path.
