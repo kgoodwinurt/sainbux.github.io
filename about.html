@@ -16,12 +16,12 @@
   <meta property="og:description" content="Full Stack Developer specializing in API-first development, scalable web apps, and modern software solutions.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sainbux.github.io/">
-  <meta property="og:image" content="https://sainbux.github.io/profile.jpg"> 
+  <meta property="og:image" content="https://sainbux.github.io/profile.jpg">
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sain Bux – Full Stack Developer at TechMatter">
   <meta name="twitter:description" content="API-first development, scalable web apps, and modern software solutions.">
-  <meta name="twitter:image" content="https://sainbux.github.io/profile.jpg"> 
+  <meta name="twitter:image" content="https://sainbux.github.io/profile.jpg">
   <meta name="twitter:site" content="@sainbuxdev">
   <script type="application/ld+json">
 {
@@ -290,8 +290,10 @@
   ]
 }
 </script>
-</head>
-<style>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: Calibri, "Segoe UI", Arial, sans-serif;
       margin: 0;
@@ -359,6 +361,20 @@
     a.btn:hover {
       background: #0D4B77;
     }
+    .social-link {
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+      color: #0D4B77;
+      text-decoration: none;
+    }
+    .social-link:hover, .social-link:focus-visible {
+      color: #007bbd;
+      transform: translateY(-3px);
+    }
+    .social-link:focus-visible {
+      outline: 2px solid #007bbd;
+      outline-offset: 4px;
+    }
     /* Make content responsive */
 body {
   font-family: Calibri, "Segoe UI", Arial, sans-serif;
@@ -397,13 +413,14 @@ section {
 }
 
   </style>
+</head>
 <body>
   <header>
     <img src="profile.jpg" alt="Sain Bux - Full-Stack Developer" style="border-radius:50%; width:150px; margin-bottom:15px;">
     <h1>Sain Bux</h1>
     <p>Full Stack Developer at TechMatter </p>
   </header>
-  
+
 
   <nav>
     <a href="index.html">Home</a>
@@ -413,7 +430,7 @@ section {
   </nav>
 <section id="about">
     <h2>About Me</h2>
-  <p>Sain Bux is a Full Stack Developer at TechMatter and also works as a technology researcher. He specializes in API-first development, scalable web applications, and modern JavaScript frameworks, including React, Vue.js, Laravel, Node.js, Magento, WordPress, Shopify, BigCommerce, and Wix.</p>  
+  <p>Sain Bux is a Full Stack Developer at TechMatter and also works as a technology researcher. He specializes in API-first development, scalable web applications, and modern JavaScript frameworks, including React, Vue.js, Laravel, Node.js, Magento, WordPress, Shopify, BigCommerce, and Wix.</p>
   <p>
    Sain Bux was born on August 21, 1992, in Tando Allahyar. He pursued his higher education in Computer Systems, earning a Bachelor of Engineering (B.E.) degree from MUET, Jamshoro.</p>
     <p>
@@ -433,19 +450,18 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
-    <i class="fab fa-facebook fa-2x"></i>
+  <a class="social-link" href="https://www.facebook.com/sainbux860/" target="_blank" rel="me noopener noreferrer" style="margin-right:10px;" aria-label="Follow Sain Bux on Facebook" title="Follow Sain Bux on Facebook">
+    <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
-    <i class="fab fa-linkedin fa-2x"></i>
+  <a class="social-link" href="https://www.linkedin.com/in/sainbux/" target="_blank" rel="me noopener noreferrer" style="margin-right:10px;" aria-label="Connect with Sain Bux on LinkedIn" title="Connect with Sain Bux on LinkedIn">
+    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
-    <i class="fab fa-twitter fa-2x"></i>
+  <a class="social-link" href="https://twitter.com/sainbuxdev/" target="_blank" rel="me noopener noreferrer" style="margin-right:10px;" aria-label="Follow Sain Bux on Twitter" title="Follow Sain Bux on Twitter">
+    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
-    <i class="fab fa-instagram fa-2x"></i>
+  <a class="social-link" href="https://www.instagram.com/sainbuxdev/" target="_blank" rel="me noopener noreferrer" style="margin-right:10px;" aria-label="Follow Sain Bux on Instagram" title="Follow Sain Bux on Instagram">
+    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
   </a>
-  
 </div>
 
 <!-- Font Awesome (for icons) -->
@@ -457,27 +473,3 @@ section {
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
