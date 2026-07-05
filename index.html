@@ -350,7 +350,7 @@
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
@@ -359,24 +359,21 @@
     a.btn:hover {
       background: #0D4B77;
     }
+    .social-link {
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+      color: #0D4B77;
+    }
+    .social-link:hover {
+      transform: translateY(-3px);
+      color: #007bbd;
+    }
+    .social-link:focus-visible {
+      outline: 2px solid #007bbd;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
     /* Make content responsive */
-body {
-  font-family: Calibri, "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f8f9fa;
-  color: #333;
-}
-
-/* Sections adjust on small screens */
-section {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
@@ -443,6 +440,7 @@ section {
   </section>
 
   <section id="contact">
+    <h2>Contact</h2>
 <p>You can connect with me through my GitHub profile or via email.</p>
 
 <p>
@@ -452,17 +450,17 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
-    <i class="fab fa-facebook fa-2x"></i>
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" rel="me noopener noreferrer" class="social-link" style="margin-right:10px;" aria-label="Follow Sain Bux on Facebook" title="Follow Sain Bux on Facebook">
+    <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
-    <i class="fab fa-linkedin fa-2x"></i>
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" rel="me noopener noreferrer" class="social-link" style="margin-right:10px;" aria-label="Connect with Sain Bux on LinkedIn" title="Connect with Sain Bux on LinkedIn">
+    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
-    <i class="fab fa-twitter fa-2x"></i>
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" rel="me noopener noreferrer" class="social-link" style="margin-right:10px;" aria-label="Follow Sain Bux on Twitter" title="Follow Sain Bux on Twitter">
+    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
-    <i class="fab fa-instagram fa-2x"></i>
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" rel="me noopener noreferrer" class="social-link" style="margin-right:10px;" aria-label="Follow Sain Bux on Instagram" title="Follow Sain Bux on Instagram">
+    <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
   </a>
   
 </div>
