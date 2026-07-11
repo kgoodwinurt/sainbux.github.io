@@ -350,7 +350,7 @@
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
@@ -358,6 +358,18 @@
     }
     a.btn:hover {
       background: #0D4B77;
+    }
+    .social-icon {
+      color: #0D4B77;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .social-icon:hover, .social-icon:focus-visible {
+      color: #007bbd;
+      transform: translateY(-3px);
+      outline: 2px solid #007bbd;
+      outline-offset: 4px;
     }
     /* Make content responsive */
 body {
@@ -433,16 +445,16 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" class="social-icon" style="margin-right:10px;" aria-label="Facebook" title="Facebook" rel="me noopener noreferrer">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" class="social-icon" style="margin-right:10px;" aria-label="LinkedIn" title="LinkedIn" rel="me noopener noreferrer">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" class="social-icon" style="margin-right:10px;" aria-label="Twitter" title="Twitter" rel="me noopener noreferrer">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" class="social-icon" style="margin-right:10px;" aria-label="Instagram" title="Instagram" rel="me noopener noreferrer">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
   
