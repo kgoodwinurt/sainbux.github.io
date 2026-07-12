@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Performance: Preconnect to Font Awesome CDN to reduce DNS/TCP/TLS latency -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <!-- Performance: Move stylesheet to head to prevent FOUC and prioritize loading -->
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>About Sain Bux – Full Stack Developer at TechMatter</title>
   <meta name="description" content="Learn more about Sain Bux, a Full Stack Developer at TechMatter, specializing in API-First Development, Web Architecture, and modern software engineering innovation." />
   <meta name="keywords" content="Sain Bux, Full Stack Developer, TechMatter, API-First Development, Web Applications, WordPress Developer, JavaScript, Software Engineer, GitHub Pages, Technology Research">
@@ -399,7 +404,8 @@ section {
   </style>
 <body>
   <header>
-    <img src="profile.jpg" alt="Sain Bux - Full-Stack Developer" style="border-radius:50%; width:150px; margin-bottom:15px;">
+    <!-- Performance: fetchpriority="high" for LCP; width/height to prevent CLS -->
+    <img src="profile.jpg" alt="Sain Bux - Full-Stack Developer" fetchpriority="high" width="150" height="150" style="border-radius:50%; width:150px; margin-bottom:15px;">
     <h1>Sain Bux</h1>
     <p>Full Stack Developer at TechMatter </p>
   </header>
@@ -448,8 +454,6 @@ section {
   
 </div>
 
-<!-- Font Awesome (for icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </section>
 
   <footer>
