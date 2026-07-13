@@ -11,6 +11,10 @@
   <link rel="canonical" href="https://sainbux.github.io/">
   <link rel="alternate" type="application/rss+xml" title="Sain Bux — Developer Insights RSS Feed" href="https://sainbux.github.io/feed.xml">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Preconnect to Font Awesome CDN to reduce connection overhead -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <!-- Move Font Awesome to head to prevent FOUC and start download early -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Sain Bux – Full Stack Developer at TechMatter">
   <meta property="og:description" content="Full Stack Developer specializing in API-first development, scalable web apps, and modern software solutions.">
@@ -328,7 +332,7 @@
     }
     section {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 20px auto;
       padding: 20px;
       background: #fff;
       border-radius: 10px;
@@ -359,24 +363,6 @@
     a.btn:hover {
       background: #0D4B77;
     }
-    /* Make content responsive */
-body {
-  font-family: Calibri, "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f8f9fa;
-  color: #333;
-}
-
-/* Sections adjust on small screens */
-section {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
@@ -399,7 +385,8 @@ section {
   </style>
 <body>
   <header>
-    <img src="profile.jpg" alt="Sain Bux" style="border-radius:50%; width:150px; margin-bottom:15px;">
+    <!-- Prioritize LCP image and set dimensions to prevent layout shift -->
+    <img src="profile.jpg" alt="Sain Bux" fetchpriority="high" width="150" height="150" style="border-radius:50%; width:150px; margin-bottom:15px;">
     <h1>Sain Bux</h1>
     <p>Full Stack Developer at TechMatter </p>
   </header>
@@ -467,8 +454,6 @@ section {
   
 </div>
 
-<!-- Font Awesome (for icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </section>
 
   <footer>
