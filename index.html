@@ -326,6 +326,22 @@
       color: #0D4B77;
       font-weight: bold;
     }
+    nav a:focus-visible,
+    a.btn:focus-visible,
+    .social-icon:focus-visible {
+      outline: 2px solid #007bbd;
+      outline-offset: 4px;
+      border-radius: 2px;
+    }
+    .social-icon {
+      display: inline-block;
+      transition: transform 0.3s ease, color 0.3s ease;
+      color: #0D4B77;
+    }
+    .social-icon:hover {
+      transform: translateY(-3px);
+      color: #007bbd;
+    }
     section {
       max-width: 900px;
       margin: 40px auto;
@@ -350,7 +366,7 @@
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
@@ -452,19 +468,18 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" class="social-icon" style="margin-right:10px; text-decoration: none;" aria-label="Facebook" title="Facebook" rel="me noopener noreferrer">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" class="social-icon" style="margin-right:10px; text-decoration: none;" aria-label="LinkedIn" title="LinkedIn" rel="me noopener noreferrer">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" class="social-icon" style="margin-right:10px; text-decoration: none;" aria-label="Twitter" title="Twitter" rel="me noopener noreferrer">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" class="social-icon" style="margin-right:10px; text-decoration: none;" aria-label="Instagram" title="Instagram" rel="me noopener noreferrer">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
-  
 </div>
 
 <!-- Font Awesome (for icons) -->
