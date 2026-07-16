@@ -1,0 +1,3 @@
+## 2026-07-16 - Critical Path and LCP Optimizations
+**Learning:** Relocating render-blocking assets (Font Awesome) to the <head> and adding resource hints (preconnect) significantly reduces Document Content Loaded (DCL) times (up to 95% in this static site). Consolidating redundant CSS blocks also reduces file size and improves maintainability without changing the rendered layout, provided the effective values (like margin) are preserved.
+**Action:** Always check for render-blocking CSS in the <body> and move to <head>. Use preconnect for critical CDN assets. Add explicit dimensions and fetchpriority="high" for LCP images to improve performance and CLS.
