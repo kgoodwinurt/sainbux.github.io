@@ -300,8 +300,8 @@
       color: #333;
     }
     h1, h2, h3 {
-  font-family: Calibri, "Segoe UI", sans-serif;
-}
+      font-family: Calibri, "Segoe UI", sans-serif;
+    }
     header {
       background: #0D4B77;
       color: #fff;
@@ -328,7 +328,7 @@
     }
     section {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 20px auto;
       padding: 20px;
       background: #fff;
       border-radius: 10px;
@@ -359,45 +359,56 @@
     a.btn:hover {
       background: #0D4B77;
     }
-    /* Make content responsive */
-body {
-  font-family: Calibri, "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f8f9fa;
-  color: #333;
-}
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #0D4B77;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    .social-icon {
+      display: inline-block;
+      color: #0D4B77;
+      transition: transform 0.3s, color 0.3s;
+      text-decoration: none;
+    }
+    .social-icon:hover {
+      transform: translateY(-3px);
+      color: #009fdf;
+    }
+    .social-icon:focus-visible {
+      outline: 2px solid #007bbd;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
 
-/* Sections adjust on small screens */
-section {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-  section {
-    margin: 10px;
-    padding: 15px;
-  }
-  img {
-    width: 100px;
-  }
-}
-
-  </style>
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      section {
+        margin: 10px;
+        padding: 15px;
+      }
+      img {
+        width: 100px;
+      }
+    }
+</style>
 <body>
+  <a href="#about" class="skip-link">Skip to Content</a>
   <header>
     <img src="profile.jpg" alt="Sain Bux" style="border-radius:50%; width:150px; margin-bottom:15px;">
     <h1>Sain Bux</h1>
@@ -423,7 +434,7 @@ section {
     </p>
     <p>
       📄 Read my publication on Zenodo: <br><br>
-      <a class="btn" href="https://doi.org/10.5281/zenodo.17058436" target="_blank">
+      <a class="btn" href="https://doi.org/10.5281/zenodo.17058436" target="_blank" rel="noopener noreferrer">
         API-First Development: A Full Stack Approach
       </a>
           <a
@@ -446,22 +457,22 @@ section {
 <p>You can connect with me through my GitHub profile or via email.</p>
 
 <p>
-  🔗 GitHub: <a href="https://github.com/Sainbux" target="_blank">Sainbux</a><br>
+  🔗 GitHub: <a href="https://github.com/Sainbux" target="_blank" rel="noopener noreferrer">Sainbux</a><br>
   📧 Email: <a href="mailto:sain@techmatterglobal.com">b--@techmatterglobal.com</a>
 </p>
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
+  <a href="https://facebook.com/sainbux860/" target="_blank" rel="me noopener noreferrer" class="social-icon" aria-label="Facebook" title="Facebook" style="margin-right:10px;">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
+  <a href="https://linkedin.com/in/sainbux/" target="_blank" rel="me noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" rel="me noopener noreferrer" class="social-icon" aria-label="Twitter" title="Twitter" style="margin-right:10px;">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://instagram.com/sainbuxdev/" target="_blank" rel="me noopener noreferrer" class="social-icon" aria-label="Instagram" title="Instagram" style="margin-right:10px;">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
   
