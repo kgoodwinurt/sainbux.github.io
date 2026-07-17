@@ -1,0 +1,4 @@
+## 2026-07-17 - Hardening Static Web Assets with CSP, SRI, and Noopener/Noreferrer
+**Vulnerability:** Reverse tab-nabbing via target="_blank" links, potential XSS via third-party CDN scripts (Font Awesome), and lack of restrictive Content Security Policy (CSP).
+**Learning:** Even purely static personal websites are vulnerable to security risks such as tab-nabbing (when opening external links without `rel="noopener noreferrer"`) and script injection or resource tampering if CDN assets are loaded without Integrity hashes.
+**Prevention:** Always enforce a strict meta-based Content Security Policy that limits script and stylesheet origins, apply Subresource Integrity (SRI) hashes to all external stylesheets/scripts, and enforce `rel="noopener noreferrer"` (or merge with `rel="me"` if appropriate) on all anchor tags targeting new browser contexts.
