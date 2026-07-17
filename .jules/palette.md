@@ -1,0 +1,3 @@
+## 2026-07-17 - [Contrast & Interactive Social Accessibility]
+**Learning:** Legacy branding or theme colors (such as `#009fdf`) may fail WCAG AA contrast guidelines for text-on-light backgrounds (~3.1:1), while simple adjustments to `#007bbd` (4.54:1) achieve compliance without affecting brand identity. Additionally, icon-only social anchors must utilize `.social-icon` classes rather than inline/text formatting to isolate hover-lift scaling and ensure assistive readers have explicit `aria-label` descriptions.
+**Action:** Always check interactive element text/background contrast using standard guidelines, and enforce dedicated `.social-icon` focus states (with 2px focus outlines and offsets) instead of generic inline text anchors.
