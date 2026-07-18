@@ -1,0 +1,3 @@
+## 2026-07-18 - Precise Social Icon Styling and Accessibility
+**Learning:** Icon-only social links require explicit `aria-label` attributes to be accessible to screen readers, but applying general CSS lift classes (such as `.social-icon`) globally or to text links sharing the same URL can degrade textual flow and cause unexpected visual movement. Cohesive `:focus-visible` states across primary buttons and social icons provide high-contrast focus rings that significantly improve interactive keyboard navigation.
+**Action:** Always scope `.social-icon` classes specifically to icon-only anchors, avoid matching inline text links sharing social domains, and pair them with `aria-label` and custom high-contrast focus rings like `2px solid #007bbd` with `outline-offset`.
