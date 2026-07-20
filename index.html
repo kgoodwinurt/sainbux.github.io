@@ -350,11 +350,32 @@
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
       transition: 0.3s;
+    }
+    a.btn:focus-visible,
+    nav a:focus-visible,
+    .social-icon:focus-visible {
+      outline: 2px solid #007bbd;
+      outline-offset: 4px;
+    }
+    .social-icon {
+      display: inline-block;
+      margin-right: 15px;
+      color: #0D4B77;
+      transition: transform 0.3s, color 0.3s;
+      text-decoration: none;
+    }
+    .social-icon:last-child {
+      margin-right: 0;
+    }
+    .social-icon:hover,
+    .social-icon:focus-visible {
+      color: #007bbd;
+      transform: translateY(-3px);
     }
     a.btn:hover {
       background: #0D4B77;
@@ -423,7 +444,7 @@ section {
     </p>
     <p>
       📄 Read my publication on Zenodo: <br><br>
-      <a class="btn" href="https://doi.org/10.5281/zenodo.17058436" target="_blank">
+      <a class="btn" href="https://doi.org/10.5281/zenodo.17058436" target="_blank" rel="noopener noreferrer">
         API-First Development: A Full Stack Approach
       </a>
           <a
@@ -446,25 +467,24 @@ section {
 <p>You can connect with me through my GitHub profile or via email.</p>
 
 <p>
-  🔗 GitHub: <a href="https://github.com/Sainbux" target="_blank">Sainbux</a><br>
+  🔗 GitHub: <a href="https://github.com/Sainbux" target="_blank" rel="noopener noreferrer">Sainbux</a><br>
   📧 Email: <a href="mailto:sain@techmatterglobal.com">b--@techmatterglobal.com</a>
 </p>
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
-  
 </div>
 
 <!-- Font Awesome (for icons) -->
