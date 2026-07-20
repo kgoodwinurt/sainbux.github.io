@@ -1,0 +1,3 @@
+## 2025-10-24 - Social Link Accessibility and Interaction Lift
+**Learning:** Icon-only social links must have matching 'aria-label' attributes for screen reader accessibility, and can be enhanced with transition and translateY hover effects using the '.social-icon' class. When applying CSS properties like `:focus-visible` or `.social-icon`, ensure the styles are added in inline `<style>` tags to both `index.html` and `about.html` static pages.
+**Action:** Always provide matching `aria-label` attributes on icon-only links and ensure focus-visible styles exist on both pages using consistent styling for interactive elements.
