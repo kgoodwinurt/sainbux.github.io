@@ -290,6 +290,9 @@
   ]
 }
 </script>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://info.orcid.org">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <style>
     body {
@@ -399,7 +402,7 @@ section {
   </style>
 <body>
   <header>
-    <img src="profile.jpg" alt="Sain Bux" style="border-radius:50%; width:150px; margin-bottom:15px;">
+    <img src="profile.jpg" alt="Sain Bux" fetchpriority="high" width="150" height="150" style="border-radius:50%; width:150px; margin-bottom:15px;">
     <h1>Sain Bux</h1>
     <p>Full Stack Developer at TechMatter </p>
   </header>
@@ -434,9 +437,10 @@ section {
      rel="me noopener noreferrer"
      style="vertical-align: top">
      <img
-        src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+        src="https://info.orcid.org/wp-content/uploads/2020/12/ORCIDiD_icon16x16.png"
         style="width: 1em; margin-inline-start: 0.5em"
-        alt="ORCID iD icon"/>
+        alt="ORCID iD icon"
+        loading="lazy"/>
       https://orcid.org/0009-0003-9562-419X
     </a>
     </p>
@@ -467,8 +471,6 @@ section {
   
 </div>
 
-<!-- Font Awesome (for icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </section>
 
   <footer>
