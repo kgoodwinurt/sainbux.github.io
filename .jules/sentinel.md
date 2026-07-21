@@ -1,0 +1,7 @@
+## 2025-07-21 - Defense-in-Depth Static Site Hardening (CSP, SRI, and Reverse Tab-Nabbing Mitigation)
+**Vulnerability:** The static HTML pages lacked security headers (Content Security Policy), Subresource Integrity (SRI) on external CSS assets, and proper tab-nabbing protection (`rel="noopener noreferrer"`) on external links. This left the site exposed to Cross-Site Scripting (XSS), CDN-compromise supply chain attacks, and reverse tab-nabbing phishing.
+**Learning:** In purely static personal websites hosted on GitHub Pages or similar providers, traditional server-side security headers (e.g., via Nginx or Apache) cannot be easily configured. Therefore, security defense must be applied client-side using HTML `<meta>` tags and element-level integrity tags. Specifically:
+1. Inline JSON-LD metadata requires the 'unsafe-inline' directive under `script-src` in CSP.
+2. CDN assets (like Font Awesome) require both `integrity` hashes and `crossorigin="anonymous"` to ensure subresource protection.
+3. Link targets require explicit `rel="noopener noreferrer"` to isolate window context and block parent redirection.
+**Prevention:** Always include a strict Content Security Policy meta tag tailored to the specific third-party origins requested, utilize SRI hashes for all external stylesheet/script links, and ensure a pre-commit check validates all external target links for tab-nabbing protection.
