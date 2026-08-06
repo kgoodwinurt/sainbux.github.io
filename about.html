@@ -350,14 +350,31 @@
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
-      transition: 0.3s;
+      transition: background 0.3s, outline 0.3s, transform 0.3s;
     }
     a.btn:hover {
       background: #0D4B77;
+    }
+    .social-icon {
+      color: #0D4B77;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.3s;
+      display: inline-block;
+    }
+    .social-icon:hover,
+    .social-icon:focus-visible {
+      color: #007bbd;
+      transform: translateY(-3px);
+    }
+    a.btn:focus-visible,
+    nav a:focus-visible,
+    .social-icon:focus-visible {
+      outline: 2px solid #007bbd;
+      outline-offset: 4px;
     }
     /* Make content responsive */
 body {
@@ -433,19 +450,18 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;">
+  <a class="social-icon" href="https://www.facebook.com/sainbux860/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="margin-right:15px;">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank">
+  <a class="social-icon" href="https://www.linkedin.com/in/sainbux/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style="margin-right:15px;">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a class="social-icon" href="https://twitter.com/sainbuxdev/" target="_blank" rel="noopener noreferrer" aria-label="Twitter" style="margin-right:15px;">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;">
+  <a class="social-icon" href="https://www.instagram.com/sainbuxdev/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
-  
 </div>
 
 <!-- Font Awesome (for icons) -->
