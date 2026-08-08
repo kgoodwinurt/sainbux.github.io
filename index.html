@@ -12,6 +12,10 @@
   <link rel="canonical" href="https://sainbux.github.io/">
   <link rel="alternate" type="application/rss+xml" title="Sain Bux — Developer Insights RSS Feed" href="https://sainbux.github.io/feed.xml">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Preconnect to Font Awesome CDN to improve resource discovery and download speed -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <!-- Font Awesome stylesheet relocated from body to head for non-blocking faster rendering -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Sain Bux – Full Stack Developer at TechMatter">
   <meta property="og:description" content="Full Stack Developer specializing in API-first development, scalable web apps, and modern software solutions.">
@@ -400,7 +404,7 @@ section {
   </style>
 <body>
   <header>
-    <img src="profile.jpg" alt="Sain Bux" style="border-radius:50%; width:150px; margin-bottom:15px;">
+    <img src="profile.jpg" alt="Sain Bux" fetchpriority="high" width="150" height="150" style="border-radius:50%; width:150px; height:150px; margin-bottom:15px;">
     <h1>Sain Bux</h1>
     <p>Full Stack Developer at TechMatter </p>
   </header>
@@ -436,6 +440,7 @@ section {
      style="vertical-align: top">
      <img
         src="https://info.orcid.org/wp-content/uploads/2020/12/ORCIDiD_icon16x16.png"
+        loading="lazy"
         style="width: 1em; margin-inline-start: 0.5em"
         alt="ORCID iD icon"/>
       https://orcid.org/0009-0003-9562-419X
@@ -468,8 +473,6 @@ section {
   
 </div>
 
-<!-- Font Awesome (for icons) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   </section>
 
   <footer>
