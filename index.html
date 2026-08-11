@@ -351,11 +351,28 @@
     a.btn {
       display: inline-block;
       padding: 10px 20px;
-      background: #009fdf;
+      background: #007bbd;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
       transition: 0.3s;
+    }
+    :focus-visible {
+      outline: 2px solid #007bbd !important;
+      outline-offset: 4px !important;
+    }
+    .social-icon {
+      display: inline-block;
+      color: #0D4B77;
+      margin-right: 10px;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .social-icon:last-child {
+      margin-right: 0;
+    }
+    .social-icon:hover, .social-icon:focus-visible {
+      transform: translateY(-3px);
+      color: #007bbd;
     }
     a.btn:hover {
       background: #0D4B77;
@@ -397,8 +414,26 @@ section {
   }
 }
 
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 10px;
+      background: #007bbd;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      z-index: 100;
+      text-decoration: none;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 10px;
+      outline: 2px solid #007bbd;
+      outline-offset: 4px;
+    }
   </style>
 <body>
+  <a href="#about" class="skip-link">Skip to Content</a>
   <header>
     <img src="profile.jpg" alt="Sain Bux" style="border-radius:50%; width:150px; margin-bottom:15px;">
     <h1>Sain Bux</h1>
@@ -453,19 +488,18 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;" rel="noopener noreferrer">
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" class="social-icon" aria-label="Sain Bux on Facebook" rel="noopener noreferrer">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" class="social-icon" aria-label="Sain Bux on LinkedIn" rel="noopener noreferrer">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;" rel="noopener noreferrer">
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" class="social-icon" aria-label="Sain Bux on Twitter" rel="noopener noreferrer">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;" rel="noopener noreferrer">
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" class="social-icon" aria-label="Sain Bux on Instagram" rel="noopener noreferrer">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
-  
 </div>
 
 <!-- Font Awesome (for icons) -->
