@@ -360,6 +360,22 @@
     a.btn:hover {
       background: #0D4B77;
     }
+    .social-icon {
+      display: inline-block;
+      margin-right: 10px;
+      color: #0D4B77;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .social-icon:hover,
+    .social-icon:focus-visible {
+      color: #009fdf;
+      transform: translateY(-3px);
+    }
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid #007bbd;
+      outline-offset: 4px;
+    }
     /* Make content responsive */
 body {
   font-family: Calibri, "Segoe UI", Arial, sans-serif;
@@ -434,19 +450,18 @@ section {
 
 <!-- Social Media Icons -->
 <div style="margin-top: 15px;">
-  <a href="https://www.facebook.com/sainbux860/" target="_blank" style="margin-right:10px;" rel="noopener noreferrer">
+  <a href="https://www.facebook.com/sainbux860/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
     <i class="fab fa-facebook fa-2x"></i>
   </a>
-  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.linkedin.com/in/sainbux/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
     <i class="fab fa-linkedin fa-2x"></i>
   </a>
-  <a href="https://twitter.com/sainbuxdev/" target="_blank" style="margin-right:10px;" rel="noopener noreferrer">
+  <a href="https://twitter.com/sainbuxdev/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">
     <i class="fab fa-twitter fa-2x"></i>
   </a>
-  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" style="margin-right:10px;" rel="noopener noreferrer">
+  <a href="https://www.instagram.com/sainbuxdev/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
     <i class="fab fa-instagram fa-2x"></i>
   </a>
-  
 </div>
 
 <!-- Font Awesome (for icons) -->
